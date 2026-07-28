@@ -24,6 +24,20 @@ A lightweight, standalone Windows-native setup for running **Open-Notebook** loc
 | **Local LLM Runtime** | Ollama (`qwen2.5:3b`, `nomic-embed-text`) |
 | **Frontend** | Node.js / Next.js |
 
+### 💻 Confirmed Working Environment (Tested on Low-End / Legacy Hardware)
+
+This project has been verified to run stably on entry-level / legacy hardware:
+
+| Component | Verified Specification |
+| :--- | :--- |
+| **CPU** | Intel Core i3-1005G1 @ 1.20GHz |
+| **RAM** | 8.00 GB (7.74 GB usable) |
+| **GPU** | Intel UHD Graphics (Integrated / Shared Memory) |
+| **OS** | Windows 11 / 10 64-bit |
+| **LLM Model** | `qwen2.5:3b` / `nomic-embed-text` (via Ollama) |
+
+> 💡 **Note on Low-Resource Optimization:** > By disabling memory-intensive OCR libraries (`docling_ocr`) and bypassing Docker virtualization, this setup achieves reliable performance even on dual-core systems with 8GB RAM.
+
 ---
 
 ## 🚀 Quick Start Guide
