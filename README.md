@@ -36,7 +36,13 @@ This project has been verified to run stably on entry-level / legacy hardware:
 | **OS** | Windows 11 / 10 64-bit |
 | **LLM Model** | `qwen2.5:3b` / `nomic-embed-text` (via Ollama) |
 
-> 💡 **Note on Low-Resource Optimization:** > By disabling memory-intensive OCR libraries (`docling_ocr`) and bypassing Docker virtualization, this setup achieves reliable performance even on dual-core systems with 8GB RAM.
+> 💡 **Note on Low-Resource Optimization & Important Usage Tip:**
+> By disabling memory-intensive OCR libraries (`docling_ocr`) and bypassing Docker virtualization, this setup runs on dual-core systems with 8GB RAM.
+> 
+> **Performance Tip:**
+> On low-spec machines, embedding generation and transformations running simultaneously can cause high CPU load (taking ~6 minutes even for a small text file). To ensure smooth processing when uploading documents, **it is recommended to skip background embedding generation during file upload** and process embeddings separately if needed.
+> 
+> *(Note: Response times for simple queries can currently take a few minutes on this specs. Optimization strategies for faster query processing are actively being explored.)*
 
 ---
 
