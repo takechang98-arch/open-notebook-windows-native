@@ -1,0 +1,2 @@
+#V2
+DEFINE FIELD asset ON TABLE source TYPE option<object> FLEXIBLE;

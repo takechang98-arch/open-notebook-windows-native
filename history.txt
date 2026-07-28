@@ -1,0 +1,2 @@
+#V2
+DELETE command WHERE id = 'command:1vrogw8pqqubt5rfwab1'; 

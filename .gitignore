@@ -1,0 +1,24 @@
+# Environment & Secrets (Never commit)
+.env
+
+# Python Virtual Environment & Cache
+.venv/
+venv/
+__pycache__/
+*.pyc
+
+# Node.js Packages & Build Outputs
+node_modules/
+.next/
+dist/
+
+# Database & Local User Data Files
+surreal.db/
+data/uploads/*
+data/podcasts/*
+!data/.gitkeep
+
+# Logs & IDE Settings
+*.log
+.vscode/
+*.exe
