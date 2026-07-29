@@ -33,7 +33,7 @@ This project has been verified to run stably on entry-level / legacy hardware:
 | Component | Version / Specification |
 | :--- | :--- |
 | **OS** | Windows 11 / 10 |
-| **Python** | 3.12+ |
+| **Python** | 3.12 / 3.13 (Tested on 3.13) |
 | **Database** | SurrealDB (Windows Binary) |
 | **Local LLM Runtime** | Ollama (`qwen2.5:3b`, `nomic-embed-text`) |
 | **Frontend** | Node.js / Next.js |
@@ -42,7 +42,7 @@ This project has been verified to run stably on entry-level / legacy hardware:
 
 ### Prerequisites
 Before running the setup, ensure you have the following installed on your system:
-* **Python 3.12+**
+* **Python 3.12 / 3.13 (Tested on 3.13)**
 * **Node.js** (v18+)
 * **Ollama** (Running locally with `qwen2.5:3b` and `nomic-embed-text`)
 * **SurrealDB** (Download `surreal.exe` for Windows and place it in the project root or system PATH)
