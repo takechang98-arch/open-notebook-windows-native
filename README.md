@@ -62,6 +62,7 @@ Before running the setup, ensure you have the following installed on your system
    ```
 
 3. **Install Python dependencies:**
+   **💡 Note: Open the generated .env file and set your API keys (e.g., OPENAI_API_KEY, GEMINI_API_KEY) and database credentials before starting the application.**
    ```powershell
    pip install uv
    uv pip install -e .
