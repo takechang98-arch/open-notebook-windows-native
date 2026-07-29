@@ -51,5 +51,35 @@ Before running the setup, ensure you have the following installed on your system
 
 1. **Clone the repository:**
    ```bash
-   git clone [https://github.com/takechang98-arch/open-notebook-windows-native.git](https://github.com/takechang98-arch/open-notebook-windows-native.git)
+   git clone https://github.com/takechang98-arch/open-notebook-windows-native.git
    cd open-notebook-windows-native
+   ```
+
+2. **Create virtual environment:**
+   ```powershell
+   python -m venv .venv
+   .\.venv\Scripts\Activate.ps1
+   ```
+
+3. **Install Python dependencies:**
+   ```powershell
+   pip install -e .
+   ```
+
+4. **Install Frontend dependencies:**
+   ```PowerShell
+   cd frontend
+   npm install
+   cd ..
+   ```
+
+5. **Configure environment variables:**
+   ```PowerShell
+   copy .env.example .env
+   ```
+
+6. **Launching the Application**
+   **Run the included batch script to automatically start SurrealDB, Ollama worker processes, backend services, and the Web UI:**
+   ```DOS
+   start_notebook.bat
+   ```
