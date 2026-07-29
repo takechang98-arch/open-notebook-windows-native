@@ -63,7 +63,8 @@ Before running the setup, ensure you have the following installed on your system
 
 3. **Install Python dependencies:**
    ```powershell
-   pip install -e .
+   pip install uv
+   uv pip install -e .
    ```
 
 4. **Install Frontend dependencies:**
