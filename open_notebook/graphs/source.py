@@ -1,6 +1,7 @@
 import operator
 import os
 import traceback  # ★ 追加
+import docx
 import io
 from pypdf import PdfReader
 from typing import Any, Dict, List, Optional
@@ -127,6 +128,21 @@ async def content_process(state: SourceState) -> dict:
 
                 except Exception as e:
                     logger.error(f"Error reading pdf file directly: {e}\n{traceback.format_exc()}")
+
+            # ---------------------------------------------------------
+            # 3. Word (.docx) ファイルのバイパス処理 (NEW!)
+            # ---------------------------------------------------------
+            elif file_path_str.lower().endswith(".docx"):
+                logger.info(f"Direct reading Word file (using python-docx): {file_path_str}")
+                try:
+                    doc = docx.Document(file_path_str)
+                    extracted_text = "\n".join([p.text for p in doc.paragraphs if p.text.strip()])
+
+                    processed = ExtractionOutput(title=title, content=extracted_text)
+                    return {"extraction": processed}
+
+                except Exception as e:
+                    logger.error(f"Error reading docx file directly: {e}\n{traceback.format_exc()}")
 
         # ---------------------------------------------------------
         # 既存の content-core 呼び出し処理へ...

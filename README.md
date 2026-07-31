@@ -10,6 +10,8 @@ A lightweight, standalone Windows-native setup for running Open-Notebook locally
 - **Character Encoding Protection:** Robust UTF-8 with automatic CP932 / Shift-JIS fallback for Japanese text processing.
 - **One-Click Orchestration:** Includes a batch script (`start_notebook.bat`) to manage background workers and environment variables seamlessly.
 
+## 📒 Supported File Types: Text (.txt), PDF (.pdf), Word (.docx)
+
 ## 💻 Confirmed Working Environment (Tested on Low-End / Legacy Hardware)
 
 This project has been verified to run stably on entry-level / legacy hardware:
